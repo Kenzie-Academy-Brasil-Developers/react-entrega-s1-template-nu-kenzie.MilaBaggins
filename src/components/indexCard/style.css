@@ -1,0 +1,48 @@
+.InicialCard-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-grey-4);
+}
+
+.InicialCard-info {
+  width: 100%;
+  display: flex;
+}
+
+.InicialCard-div-info {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.InicialCard-ul-info {
+  padding: 0px;
+  list-style: none;
+  width: 250px;
+  height: 300px;
+  text-align: start;
+}
+
+.InicialCard-div-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration {
+  width: 500px;
+}
+
+.InicialCard-small {
+  color: var(--color-grey-1);
+}
+
+#init-button {
+  margin-top: 20px;
+  padding: 8px 70px 8px 70px;
+}

@@ -1,0 +1,67 @@
+.Cards-section {
+  width: 50%;
+  margin-top: 28px;
+}
+
+.Cards-div-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Cards-button-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#all-button {
+  padding: 7px 12px 7px 12px;
+}
+
+#Card-div-insert-card {
+  overflow: scroll;
+}
+
+.Cards-img {
+  margin-top: 20px;
+  width: 442px;
+}
+
+.trash-img {
+  cursor: pointer;
+}
+
+.Cards-entrada {
+  margin-top: 15px;
+  display: flex;
+  color: var(--color-grey-4);
+  background-color: var(--color-grey-1);
+}
+
+.Cards-green-tag {
+  background-color: var(--color-secundary);
+  width: 10px;
+  color: var(--color-secundary);
+  height: 85px;
+}
+
+.Cards-greyr-tag {
+  background-color: var(--color-grey-3);
+  width: 10px;
+  color: var(--color-grey-3);
+  height: 85px;
+}
+
+.Cards-card-info {
+  width: 405px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px 0px 0px;
+}
+.Cards-div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 15px;
+}
