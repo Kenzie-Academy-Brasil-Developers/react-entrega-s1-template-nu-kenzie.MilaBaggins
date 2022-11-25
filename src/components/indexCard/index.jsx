@@ -3,9 +3,7 @@ import "../../../src/index.css";
 import Logo from "../../img/Nu Kenzie.svg";
 import Illustration from "../../img/illustration.svg";
 
-function changePages() {}
-
-export function InicialCard() {
+export function InicialCard({ setIsLanding }) {
   return (
     <section className="InicialCard-section">
       <div className="InicialCard-info container">
@@ -24,7 +22,9 @@ export function InicialCard() {
             </li>
             <li>
               <button
-                onClick={changePages}
+                onClick={() => {
+                  setIsLanding(false);
+                }}
                 className="button-pink"
                 id="init-button"
               >
@@ -40,3 +40,5 @@ export function InicialCard() {
     </section>
   );
 }
+
+export default InicialCard;

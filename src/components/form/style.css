@@ -1,19 +1,10 @@
-.Form-section {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-
 .Form-div {
   display: flex;
-  justify-content: left;
   width: 50%;
 }
 
 .Form {
-  display: flex;
-  justify-content: center;
-  width: 50%;
+  width: 100%;
 }
 
 .Form-ul {
@@ -77,4 +68,10 @@
   width: 100px;
   font-family: "Nunito", sans-serif;
   background-color: var(--color-grey-1);
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 85%;
+  }
 }

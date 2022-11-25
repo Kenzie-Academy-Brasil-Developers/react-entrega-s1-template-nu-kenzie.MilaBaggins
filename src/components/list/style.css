@@ -1,0 +1,37 @@
+.Cards-section {
+  width: 94%;
+  margin-top: 28px;
+  margin-left: 30px;
+}
+
+.Cards-div-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Cards-button-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#all-button {
+  padding: 7px 12px 7px 12px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 85%;
+  }
+
+  .Cards-div-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .Cards-img {
+    max-width: 100%;
+  }
+}

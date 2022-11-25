@@ -46,3 +46,21 @@
   margin-top: 20px;
   padding: 8px 70px 8px 70px;
 }
+
+@media (max-width: 1000px) {
+  .illustration {
+    width: 300px;
+  }
+  .InicialCard-section {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .InicialCard-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

@@ -1,12 +1,19 @@
 import "./style.css";
 import Logo from "../../img/Nu Kenzie Black.svg";
 
-export function Header() {
+export function Header({ setIsLanding }) {
   return (
     <section className="Header-section">
       <div className="Header-div container">
         <img src={Logo} alt="" className="logo" />
-        <button className="button-grey">Início</button>
+        <button
+          onClick={() => {
+            setIsLanding(true);
+          }}
+          className="button-grey"
+        >
+          Início
+        </button>
       </div>
     </section>
   );

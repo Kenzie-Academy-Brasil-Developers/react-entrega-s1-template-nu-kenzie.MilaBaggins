@@ -8,3 +8,38 @@
   justify-content: center;
   width: 100%;
 }
+
+.formTotal-div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 85%;
+  }
+  .HomeNoCard-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .HomeNoCard-div-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .formTotal-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

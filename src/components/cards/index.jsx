@@ -1,56 +1,35 @@
 import "./style.css";
-import NoCardImg from "../../img/noCard.svg";
 import TrashImg from "../../img/trash.svg";
 
-export function Cards() {
+export function Cards({ transaction, index, onClickDelete }) {
   return (
-    <section className="Cards-section">
-      <div className="Cards-div-header">
-        <p>Resumo financeiro</p>
-        <div className="Cards-button-div">
-          <button className="button-pink" id="all-button">
-            Todos
-          </button>
-          <button className="button-grey" id="value-in-button">
-            Entradas
-          </button>
-          <button className="button-grey" id="value-out-button">
-            Despesas
-          </button>
-        </div>
-      </div>
-      <div id="Card-div-insert-card">
-        <section className="Cards-entrada" id="card-value-in">
+    <div id="Card-div-insert-card">
+      <section className="Cards-entrada" id="card-value-in">
+        {transaction.type === "entrada" ? (
           <div className="Cards-green-tag">p</div>
-          <div className="Cards-div">
-            <div className="Cards-card-info">
-              <p>
-                <strong>Descrição</strong>{" "}
-              </p>
-              <small>R$ dinheiro</small>
-              <img src={TrashImg} alt="" className="trash-img" />
-            </div>
-            <small>Entrada</small>
-          </div>
-        </section>
+        ) : (
+          <div className="Cards-grey-tag">p</div>
+        )}
 
-        <section className="Cards-entrada" id="card-value-out">
-          <div className="Cards-greyr-tag">p</div>
-          <div className="Cards-div">
-            <div className="Cards-card-info">
-              <p>
-                <strong>Descrição</strong>{" "}
-              </p>
-              <small>R$ dinheiro</small>
-              <img src={TrashImg} alt="" className="trash-img" />
-            </div>
-            <small>Saída</small>
+        <div className="Cards-div">
+          <div className="Cards-card-info">
+            <p>
+              <strong>{transaction.description}</strong>{" "}
+            </p>
+            <small>R$ {transaction.value}</small>
+            <img
+              src={TrashImg}
+              alt=""
+              className="trash-img"
+              onClick={() => {
+                onClickDelete(index);
+              }}
+            />
           </div>
-        </section>
-
-        {/* <img src={NoCardImg} alt="" className="Cards-img" /> */}
-      </div>
-    </section>
+          <small>{transaction.type}</small>
+        </div>
+      </section>
+    </div>
   );
 }
 

@@ -1,16 +1,33 @@
 import Header from "../components/header/index.jsx";
 import Form from "../components/form/index.jsx";
-import Cards from "../components/cards/index.jsx";
 import "./style.css";
+import List from "../components/list/index.jsx";
+import TotalMoney from "../components/totalMoney/index.jsx";
 
-export function HomeNoCard() {
+export function HomeNoCard({
+  setIsLanding,
+  listTransactions,
+  setListTransactions,
+}) {
   return (
     <div className="HomeNoCard">
-      <Header />
+      <Header setIsLanding={setIsLanding} />
       <div className="HomeNoCard-div">
         <div className="HomeNoCard-div-main container">
-          <Form />
-          <Cards />
+          <div className="formTotal-div">
+            <Form
+              setIsLanding={setIsLanding}
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+            />
+            <TotalMoney listTransactions={listTransactions} />
+          </div>
+          <div className="list-div">
+            <List
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+            />
+          </div>
         </div>
       </div>
     </div>
